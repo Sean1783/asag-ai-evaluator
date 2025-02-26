@@ -1,0 +1,342 @@
+[
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "Different states",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 2.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.6666666666666666,
+        "weight": 0.0002720348204570185,
+        "index": 800,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: Different states\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 1,
+            "reason": "The student's answer is unclear and does not address the question about the voltage reading."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "there is a difference of 1.5 volts between terminal 1 and the positive terminal",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 2.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.6666666666666666,
+        "weight": 0.0002720348204570185,
+        "index": 801,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: there is a difference of 1.5 volts between terminal 1 and the positive terminal\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer correctly states that there is a difference of 1.5 volts, but it lacks detail and does not explain the role of the gap or the context of the terminals."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "terminal 1 and the positive terminal are connected.",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 802,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: terminal 1 and the positive terminal are connected.\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer is incomplete and does not explain why a voltage reading is observed, whereas the reference answer correctly identifies that the terminals are separated by a gap, which is relevant to understanding voltage."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "because terminal 1 is connected to the negative terminal which has a 1.5 volt difference with the positive terminal",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 803,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: because terminal 1 is connected to the negative terminal which has a 1.5 volt difference with the positive terminal\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer provides some reasoning for the voltage reading but incorrectly states the connection to the negative terminal without considering how voltage is measured. The reference answer is incomplete but indicates an understanding of the separation between terminals."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "Because the meter was hooked up to two sides of the battery.",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 804,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: Because the meter was hooked up to two sides of the battery.\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer is vague and does not explain the concept of voltage in relation to the terminals."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "Terminal 1 is connected to the negative battery terminal and is in a different state than the positive battery terminal.",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 805,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: Terminal 1 is connected to the negative battery terminal and is in a different state than the positive battery terminal.\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer partially addresses the question by mentioning the connection to the negative terminal but does not explain the reason for the specific voltage reading of 1.5 volts compared to the positive terminal."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "because terminal 1 had both a positive and negative charge.",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 806,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: because terminal 1 had both a positive and negative charge.\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer is incorrect because it does not explain the voltage reading in relation to the separation of terminals; it incorrectly states the presence of both positive and negative charges instead of addressing the proper concepts of voltage. The reference answer correctly identifies the importance of the gap between the terminals."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "I\"m not sure",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 0.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.0,
+        "weight": 0.0008116883116883117,
+        "index": 807,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: I\"m not sure\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 1,
+            "reason": "The student's answer does not address the question or provide any explanation for the voltage reading."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "Because the positive circuit has a voltage of 1.5 volts.",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 808,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: Because the positive circuit has a voltage of 1.5 volts.\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer correctly states the voltage but lacks a clear explanation of how the terminals are related or why that voltage is present."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "Postive terminal is not connected to 1.",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 809,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: Postive terminal is not connected to 1.\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer is incorrect and does not explain the voltage reading, failing to address the relationship between terminal 1 and the positive terminal."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "Because terminal 1 was hooked u to the positive terminal which is automatically 1.5 V",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 810,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: Because terminal 1 was hooked u to the positive terminal which is automatically 1.5 V\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer provides a basic explanation, but it lacks clarity and does not directly address the relationship between the terminals or the reason for the specific voltage reading."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.",
+        "provided_answer": "terminal 1 is not connected to the positive battery terminal",
+        "reference_answer": "Terminal 1 and the positive terminal are separated by the gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 811,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain why you got a voltage reading of 1.5 for terminal 1 and the positive terminal.\n        \n        Student's Answer: terminal 1 is not connected to the positive battery terminal\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: Terminal 1 and the positive terminal are separated by the gap\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student correctly identifies that terminal 1 is not connected to the positive battery terminal, but does not explain how this relates to the voltage reading of 1.5."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "bulb a and b will still be contained within a closed path of the battery",
+        "reference_answer": "bulbs A and B are still in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 812,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: bulb a and b will still be contained within a closed path of the battery\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulbs A and B are still in closed paths with the battery\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 5,
+            "reason": "The student's answer conveys the main idea that bulbs A and B remain part of a closed circuit with the battery, similar to the reference answer, but with slightly less clarity."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "there is still a closed path that contains the battery, bulb a, and bulb b",
+        "reference_answer": "bulbs A and B are still in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 813,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: there is still a closed path that contains the battery, bulb a, and bulb b\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulbs A and B are still in closed paths with the battery\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 4,
+            "reason": "The student's answer conveys the correct idea that bulbs A and B are part of a closed circuit with the battery, but it lacks clarity and specificity compared to the reference answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "because bulb A and B are within the same path",
+        "reference_answer": "bulbs A and B are still in closed paths with the battery",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 814,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: because bulb A and B are within the same path\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulbs A and B are still in closed paths with the battery\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 3,
+            "reason": "The student's answer is partially correct, as it indicates that bulbs A and B are in the same path, but it lacks clarity and specificity compared to the reference answer, which accurately states that they are in closed paths with the battery."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "bulb a will be in a closed path. bulb b will be in a closed path.",
+        "reference_answer": "bulbs A and B are still in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 815,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: bulb a will be in a closed path. bulb b will be in a closed path.\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulbs A and B are still in closed paths with the battery\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer indicates an understanding that both bulbs A and B are in closed paths; however, it lacks clarity and detail compared to the reference answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "bulbs a and b are on a closed path with the battery",
+        "reference_answer": "bulbs A and B are still in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 816,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: bulbs a and b are on a closed path with the battery\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulbs A and B are still in closed paths with the battery\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 4,
+            "reason": "The student's answer correctly identifies that bulbs A and B are on a closed circuit with the battery, though it contains minor grammatical errors."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "bulb a and bulb b are still in a closed path with the battery.",
+        "reference_answer": "bulbs A and B are still in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 817,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: bulb a and bulb b are still in a closed path with the battery.\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulbs A and B are still in closed paths with the battery\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 4,
+            "reason": "The student's answer conveys the essential idea that bulbs A and B remain connected in a circuit with the battery, but contains minor grammatical errors."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "Bulbs B and A will still be on closed paths with the battery",
+        "reference_answer": "bulbs A and B are still in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 818,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: Bulbs B and A will still be on closed paths with the battery\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulbs A and B are still in closed paths with the battery\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 3,
+            "reason": "The student's answer conveys the same idea as the reference answer but uses slightly less clear phrasing ('will still be on closed paths') instead of 'are still in closed paths'. However, the essential meaning is retained, justifying a high score."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "bulb c is not in the same path of bulbs a and b.",
+        "reference_answer": "bulbs A and B are still in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 819,
+        "system_role_prompt": "You are a genius",
+        "system_role_temperament": null,
+        "full_prompt": "\n        Evaluate the student's answer to the following question.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: bulb c is not in the same path of bulbs a and b.\n        \n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulbs A and B are still in closed paths with the battery\n        \n        None\n        \n        \n        - Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            None\n        \n        ",
+        "ai_response": {
+            "score": 2,
+            "reason": "The student's answer identifies that bulb C is not in the same path as bulbs A and B, which is correct, but it does not explain the implications of this for the circuit's operation or how it relates to the closed paths."
+        }
+    }
+]

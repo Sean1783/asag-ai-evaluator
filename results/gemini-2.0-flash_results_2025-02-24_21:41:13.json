@@ -1,0 +1,302 @@
+[
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and terminal 6.",
+        "provided_answer": "There is a gap between 1 and 6",
+        "reference_answer": "Terminals 1 and 6 are separated by the gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 200,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student's answer is correct and equivalent to the reference answer."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and terminal 6.",
+        "provided_answer": "Terminal 1 is not connected to terminal 6 because there is a gap.",
+        "reference_answer": "Terminals 1 and 6 are separated by the gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 201,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student correctly identified the reason for the voltage reading, i.e. the presence of a gap."
+        }
+    },
+    {
+        "question": "Explain why you got a voltage reading of 1.5 for terminal 1 and terminal 6.",
+        "provided_answer": "they are separated by a gap.",
+        "reference_answer": "Terminals 1 and 6 are separated by the gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 202,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student's answer is correct and matches the reference answer."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "because bulb a and c were still contained within a closed path with the battery",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 203,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student's answer is completely correct, and it contains all of the information present in the reference answer."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "there is still a closed path that contains the battery, bulb a, and bulb c",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 204,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student correctly identifies that bulbs A and C remain in a closed path with the battery, which is the reason they remain lit."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "because they are within different paths",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 205,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 0.75,
+            "reason": "The answer indicates an understanding of parallel paths, but lacks the explicit mention of a closed circuit with the battery for A and C."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "because bulb a had a seperate closed path from b. bulb c had a seperate closed path from bulb b.",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 206,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 0.8,
+            "reason": "The answer correctly identifies that bulbs A and C each have their own closed path, though it mistakenly refers to B in both cases."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "because bulb a is in a closed path, and bulb c is in a closed path.",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 207,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student correctly identifies that bulbs A and C remain in closed paths, which is why they stay lit when bulb B burns out."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "because bulbs a and c are on a closed path with the battery",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 208,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student's answer is completely correct."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "because bulb b did not create a gaop.",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 209,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 0.6,
+            "reason": "The student's answer suggests an understanding of how the circuit remains complete for bulbs A and C despite bulb B burning out, but it lacks the precision of stating that A and C are still in a closed loop with the battery. The term 'gaop' is also unclear, though presumably meaning 'gap'."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "because bulb a and c were still in a closed path with the battery.",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 210,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student's answer is completely correct and matches the reference answer exactly."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "Bulbs A and C were still on closed paths with the battery",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 211,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student's answer is identical to the reference answer and completely correct."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "bulbs a and c are not in the same path of bulb b",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 212,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 0.8,
+            "reason": "The student's answer is not as complete as the reference answer but the student did indicate that A and C were on a different path. This answer conveys the gist of the correct answer."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "Because they were contained in closed paths.",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 213,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 0.9,
+            "reason": "The answer is almost completely correct, but it could be improved by explicitly stating that the closed paths also include the battery."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "because the paths were still in a closed circuit with the battery terminal",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 214,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student correctly states that bulbs A and C remained lit because they were still in a closed circuit with the battery. This is a complete and accurate answer."
+        }
+    }
+]

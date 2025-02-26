@@ -1,0 +1,342 @@
+[
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "There is no path through bulb B",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 600,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: There is no path through bulb B\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.5,
+            "reason": "The student's answer identifies a key concept about bulb B but lacks clarity and detail compared to the reference answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "There will be a gap.",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 601,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: There will be a gap.\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.5,
+            "reason": "The student's answer is partially correct but lacks detail and clarity compared to the reference answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "there is a gap in the closed path",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 602,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: there is a gap in the closed path\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.75,
+            "reason": "The student's answer correctly identifies the presence of a gap, but it lacks clarity by not specifying that bulb B creates the gap."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "there is a gap in the circuit",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 603,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: there is a gap in the circuit\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.8,
+            "reason": "The student's answer identifies the gap in the circuit, which aligns with the reference answer's implication about bulb B creating that gap, but it lacks the specificity regarding the role of bulb B."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "if bulb B is damaged there will be a gap in the curcuit",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 604,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: if bulb B is damaged there will be a gap in the curcuit\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.8,
+            "reason": "The student's answer correctly identifies that bulb B being damaged creates a gap in the circuit, but the wording is slightly less precise than the reference answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "?",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 0.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.0,
+        "weight": 0.0008116883116883117,
+        "index": 605,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: ?\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.0,
+            "reason": "The student's answer is not provided and is represented by a question mark, which does not address the question at all."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "They will not be on because it will cause a gap.",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 606,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: They will not be on because it will cause a gap.\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.5,
+            "reason": "The student's answer conveys a relevant idea about the gap but lacks clarity and specificity compared to the reference answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "if bulb b is damaged, it creates a gap in the circuit.",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 607,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: if bulb b is damaged, it creates a gap in the circuit.\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.9,
+            "reason": "The student's answer demonstrates understanding that bulb B causes a gap in the circuit, but it could be clearer and more direct."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "The path will not be closed.",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 608,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: The path will not be closed.\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.5,
+            "reason": "The student's answer provides some insight into the situation by stating that the path will not be closed, but it lacks clarity and detail compared to the reference answer, which directly addresses the reason for the gap."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "if bulb b is damaged it does not make a complete circut",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 609,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: if bulb b is damaged it does not make a complete circut\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.75,
+            "reason": "The student's answer correctly identifies that a damaged bulb affects the circuit but lacks the precision of the reference answer in clearly stating that it creates a gap."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "when bulb b is damaged there is no complete circut",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 610,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: when bulb b is damaged there is no complete circut\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.75,
+            "reason": "The student's answer correctly identifies that bulb B being damaged leads to an incomplete circuit, which is a valid reasoning. However, it lacks the conciseness and clarity of the reference answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "there will be a gap",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 611,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: there will be a gap\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.5,
+            "reason": "The student's answer indicates an understanding that there is a gap, but it does not specify that bulb B is the cause, which is essential for a complete answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "distrupt the circuit",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 2.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.6666666666666666,
+        "weight": 0.0002720348204570185,
+        "index": 612,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: distrupt the circuit\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.2,
+            "reason": "The student's answer touches on an aspect of the circuit but lacks clarity and does not adequately explain the reasoning behind their statement."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "Because the path connecting the bulbs will be damaged",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 2.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.6666666666666666,
+        "weight": 0.0002720348204570185,
+        "index": 613,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: Because the path connecting the bulbs will be damaged\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.5,
+            "reason": "The student's answer provides a reason related to damage but does not clearly explain how it connects to the concept of a gap created by bulb B."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "the holder of the bulb will damage the other bulb",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 614,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: the holder of the bulb will damage the other bulb\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.25,
+            "reason": "The student's answer is not directly relevant to the question of reasoning, and while it implies a potential issue, it lacks clarity and depth compared to the reference answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "because if bulb b is damaged, then there is no path through the bulb, creating an incomplete circuit",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 615,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: because if bulb b is damaged, then there is no path through the bulb, creating an incomplete circuit\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.75,
+            "reason": "The student's answer addresses the concept of an incomplete circuit due to a damaged bulb, which is relevant, but it could be more concise and directly equivalent to the reference answer."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "if bulb b is damaged, then the path will have a gap.",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 616,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: if bulb b is damaged, then the path will have a gap.\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.75,
+            "reason": "The student's answer partially explains the reasoning, but it could be more direct and concise. They mention that if bulb B is damaged, it creates a gap, which aligns with the reference answer, but the phrasing is somewhat indirect."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "It still has a connect path between bulb a and c and the battery.",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 1.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00023832221163012392,
+        "index": 617,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: It still has a connect path between bulb a and c and the battery.\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.4,
+            "reason": "The student's answer addresses the connection between bulbs and the battery but does not clearly explain the significance of bulb B in creating a gap, which is crucial to fully answer the question."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "They are connected to the battery not each other",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 2.0,
+        "data_source": "Beetle",
+        "normalized_grade": 0.6666666666666666,
+        "weight": 0.0002720348204570185,
+        "index": 618,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: They are connected to the battery not each other\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.2,
+            "reason": "The student's answer indicates some understanding of the circuit setup but fails to explain the reasoning clearly or accurately, as it does not mention the gap or how it relates to the question."
+        }
+    },
+    {
+        "question": "Explain your reasoning.",
+        "provided_answer": "when the bulb is burnt it creates a gap in the closed path",
+        "reference_answer": "bulb B creates a gap",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 619,
+        "system_role_prompt": "You are a stupid baby",
+        "system_role_temperament": "stupid",
+        "full_prompt": "\n        Evaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n        \n        Question: Explain your reasoning.\n        \n        Student's Answer: when the bulb is burnt it creates a gap in the closed path\n        \n        The following reference answer represents a perfect answer to the question.\n        \n        Reference Answer: bulb B creates a gap\n        \n        \n    - A score of 1.00 is a perfect answer.\n    - A score of 0.00 is a completely incorrect answer.\n        \n        Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n        ",
+        "ai_response": {
+            "score": 0.8,
+            "reason": "The student's answer captures the essential idea that a burnt bulb creates a gap in a circuit, but it could be more concise and directly aligned with the reference answer."
+        }
+    }
+]
