@@ -46,10 +46,11 @@ def construct_prompt():
         print(prompt.generate_full_prompt())
 
 def main():
+    pass
     # get_documents_from_database()
     # insert_document()
     # insert_documents_into_database()
-    run_tests()
+    # run_tests()
     # construct_prompt()
 
 if __name__ == '__main__':
