@@ -1,0 +1,107 @@
+[
+    {
+        "question": "What role does the path play in determining whether or not a switch affects a bulb?",
+        "provided_answer": "the switch has to be contained in the same path as the bulb and the battery",
+        "reference_answer": "If a bulb and a switch are in the same path the switch affects the bulb",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 3608,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "full_prompt": "\nEvaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n\nQuestion: What role does the path play in determining whether or not a switch affects a bulb?\n\nStudent's Answer: the switch has to be contained in the same path as the bulb and the battery\n\nThe following reference answer represents a perfect answer to the question.\n        \nReference Answer: If a bulb and a switch are in the same path the switch affects the bulb\n\nUse the below examples as a grading reference:\n- A score of 1.00 is a completely correct answer.\n- A score of 0.00 is a completely incorrect answer.\n- A score of 0.90 would be for an answer that is almost completely correct.\n- A score of 0.10 would be for an answer that is almost completely incorrect.\n\nReturn the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n",
+        "ai_response": {
+            "score": 0.95,
+            "reason": "The answer is almost perfect. It contains the correct information and is only missing minor details."
+        }
+    },
+    {
+        "question": "What is the relationship between the amount of effort required to lift the load and its distance from the fulcrum?",
+        "provided_answer": "It is easier to lift when the load is closer to the fulcrum.",
+        "reference_answer": "If the effort is applied farther from the fulcrum, less effort will lift the load.",
+        "grade": 1.0,
+        "data_source": "SciEntsBank",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00024084778420038535,
+        "index": 2501,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "full_prompt": "\nEvaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n\nQuestion: What is the relationship between the amount of effort required to lift the load and its distance from the fulcrum?\n\nStudent's Answer: It is easier to lift when the load is closer to the fulcrum.\n\nThe following reference answer represents a perfect answer to the question.\n        \nReference Answer: If the effort is applied farther from the fulcrum, less effort will lift the load.\n\nUse the below examples as a grading reference:\n- A score of 1.00 is a completely correct answer.\n- A score of 0.00 is a completely incorrect answer.\n- A score of 0.90 would be for an answer that is almost completely correct.\n- A score of 0.10 would be for an answer that is almost completely incorrect.\n\nReturn the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n",
+        "ai_response": {
+            "score": 0.9,
+            "reason": "The answer is correct, but lacks some of the detail present in the reference answer."
+        }
+    },
+    {
+        "question": "Why didn^t bulbs A and C go out after bulb B burned out?",
+        "provided_answer": "Because bulbs A and C are still contained in a closed path to the battery.",
+        "reference_answer": "Bulbs A and C are still contained in closed paths with the battery",
+        "grade": 3.0,
+        "data_source": "Beetle",
+        "normalized_grade": 1.0,
+        "weight": 0.00015015015015015014,
+        "index": 290,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "full_prompt": "\nEvaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n\nQuestion: Why didn^t bulbs A and C go out after bulb B burned out?\n\nStudent's Answer: Because bulbs A and C are still contained in a closed path to the battery.\n\nThe following reference answer represents a perfect answer to the question.\n        \nReference Answer: Bulbs A and C are still contained in closed paths with the battery\n\nUse the below examples as a grading reference:\n- A score of 1.00 is a completely correct answer.\n- A score of 0.00 is a completely incorrect answer.\n- A score of 0.90 would be for an answer that is almost completely correct.\n- A score of 0.10 would be for an answer that is almost completely incorrect.\n\nReturn the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n",
+        "ai_response": {
+            "score": 1.0,
+            "reason": "The student's answer perfectly matches the reference answer."
+        }
+    },
+    {
+        "question": "Look at the 2 pictures of drops on a flat, waterproof surface. The drop on the left is soapy water and the drop on the right is plain water. What causes the soapy water to look like it does?",
+        "provided_answer": "The soap makes the dome break.",
+        "reference_answer": "The surface tension is broken by the soap so the soapy water drop is flat.",
+        "grade": 2.0,
+        "data_source": "SciEntsBank",
+        "normalized_grade": 0.6666666666666666,
+        "weight": 9.622786759045419e-05,
+        "index": 1844,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "full_prompt": "\nEvaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n\nQuestion: Look at the 2 pictures of drops on a flat, waterproof surface. The drop on the left is soapy water and the drop on the right is plain water. What causes the soapy water to look like it does?\n\nStudent's Answer: The soap makes the dome break.\n\nThe following reference answer represents a perfect answer to the question.\n        \nReference Answer: The surface tension is broken by the soap so the soapy water drop is flat.\n\nUse the below examples as a grading reference:\n- A score of 1.00 is a completely correct answer.\n- A score of 0.00 is a completely incorrect answer.\n- A score of 0.90 would be for an answer that is almost completely correct.\n- A score of 0.10 would be for an answer that is almost completely incorrect.\n\nReturn the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n",
+        "ai_response": {
+            "score": 0.75,
+            "reason": "The answer identifies the core concept that the soap breaks something that affects the shape of the drop, but doesn't identify surface tension."
+        }
+    },
+    {
+        "question": "Ms. Teridann, a geologist, made a chart showing the scratch-test data for 3 minerals (Mineral X, Mineral Y, and Mineral Z). She wrote \"yes\" if the tool scratched the mineral and wrote \"no\" if it did not scratch it. Topaz is a mineral that cannot be scratched by a fingernail, a penny, or a paperclip. How hard is topaz compared to minerals X, Y, and Z? Explain how you know.",
+        "provided_answer": "Mineral Z cannot be scratched by penny, fingernail, and paperclip. Topaz cannot be scratched by anything.",
+        "reference_answer": "Topaz would be the hardest of the 4 minerals because none of the tools could scratch topaz and at least one tool could scratch each of the other minerals.",
+        "grade": 1.0,
+        "data_source": "SciEntsBank",
+        "normalized_grade": 0.3333333333333333,
+        "weight": 0.00024084778420038535,
+        "index": 4142,
+        "system_role_info": {
+            "system_role_prompt": "You are an intelligent grader",
+            "system_role": "You are an",
+            "system_role_adjective": "intelligent",
+            "system_role_noun": "grader"
+        },
+        "full_prompt": "\nEvaluate the student's answer to the following question and assign it a number grade in the range of 0.00 to 1.00.\n\nQuestion: Ms. Teridann, a geologist, made a chart showing the scratch-test data for 3 minerals (Mineral X, Mineral Y, and Mineral Z). She wrote \"yes\" if the tool scratched the mineral and wrote \"no\" if it did not scratch it. Topaz is a mineral that cannot be scratched by a fingernail, a penny, or a paperclip. How hard is topaz compared to minerals X, Y, and Z? Explain how you know.\n\nStudent's Answer: Mineral Z cannot be scratched by penny, fingernail, and paperclip. Topaz cannot be scratched by anything.\n\nThe following reference answer represents a perfect answer to the question.\n        \nReference Answer: Topaz would be the hardest of the 4 minerals because none of the tools could scratch topaz and at least one tool could scratch each of the other minerals.\n\nUse the below examples as a grading reference:\n- A score of 1.00 is a completely correct answer.\n- A score of 0.00 is a completely incorrect answer.\n- A score of 0.90 would be for an answer that is almost completely correct.\n- A score of 0.10 would be for an answer that is almost completely incorrect.\n\nReturn the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:\n            ```json\n            {\"score\": <your score here>, \"reason\": \"<your brief explanation here>\"}\n            \n        \n",
+        "ai_response": {
+            "score": 0.5,
+            "reason": "The answer only identifies Mineral Z as being resistant to scratches from the tools. It doesn't compare the hardness of topaz to Minerals X and Y, nor does it explicitly state that Topaz is harder than Mineral Z. It also contains an incorrect statement that topaz cannot be scratched by anything. A more complete answer would be needed for a higher score."
+        }
+    }
+]

@@ -30,8 +30,10 @@ f"""Use the below examples as a grading reference:
 - A score of 0.10 would be for an answer that is almost completely incorrect."""))
 
     for row in samples.itertuples(False):
+        # print(row)
         prompt = prompt_builder.build(row)
         full_prompt = prompt.generate_full_prompt()
+        # print(full_prompt)
         system_role_prompt = prompt.get_full_system_role_prompt()
         response = ai_model_context.query(system_role_prompt, full_prompt)
         formatted_result = format_result3(row, prompt, response)

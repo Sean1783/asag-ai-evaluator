@@ -1,5 +1,8 @@
 from src.database.database_manager import DatabaseManager
 from src.dataset.dataset_factory import DatasetFactory
+from src.sampling.RandomSamples import RandomSamples
+from src.sampling.SamplesByFeature import SamplesByFeature
+from src.sampling.SamplingContext import SamplingContext
 from src.sampling.SamplingStrategy import SamplingStrategy
 from src.test_runner.test_runner import *
 from constants import *
@@ -16,7 +19,25 @@ def sampling_tests():
     meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
     meyerger.prep_dataset()
     ds = meyerger.get_dataset()
-    samples = SamplingStrategy
+    strategy = SamplingContext(RandomSamples())
+    samples = strategy.get_samples(ds, "", 10)
+    print(samples)
+    strategy.set_sampling_strategy(SamplesByFeature())
+    samples = strategy.get_samples(ds, "data_source", 5)
+    print(samples)
+
+def pipline_tests():
+    meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
+    meyerger.prep_dataset()
+    ds = meyerger.get_dataset()
+    # strategy = SamplingContext(SamplesByFeature())
+    strategy = SamplingContext(RandomSamples())
+    # samples = strategy.get_samples(ds, "data_source", 1)
+    samples = strategy.get_samples(ds, "", 5)
+    ai_model = AIModels.GEMINI_2_FLASH.value
+    ai_service = ModelContext(ai_model)
+    test_results = run_test(samples, ai_service)
+    save_results(f"results/{ai_model}_results", test_results)
 
 
 def run_tests() -> None:
@@ -49,7 +70,11 @@ def get_documents_from_database() -> None:
         print(result)
 
 def construct_prompt():
-    samples = select_data(0, 1)
+    meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
+    meyerger.prep_dataset()
+    ds = meyerger.get_dataset()
+    strategy = SamplingContext(RandomSamples())
+    samples = strategy.get_samples(ds, "", 1)
     for row in samples.itertuples(False):
         prompt = (Prompt.PromptBuilder()
                   .with_system_role("You are a")
@@ -60,13 +85,16 @@ def construct_prompt():
                   .build(row))
         print(prompt.generate_full_prompt())
 
+
 def main():
-    dataset_tests()
+    # pipline_tests()
+    # sampling_tests()
+    # dataset_tests()
     # get_documents_from_database()
     # insert_document()
     # insert_documents_into_database()
     # run_tests()
-    # construct_prompt()
+    construct_prompt()
 
 if __name__ == '__main__':
     main()

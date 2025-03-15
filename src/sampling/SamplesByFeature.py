@@ -1,10 +1,10 @@
-import SamplingStrategy
+from src.sampling.SamplingStrategy import SamplingStrategy
+
 
 class SamplesByFeature(SamplingStrategy):
     def sample(self, dataframe, feature, n: int):
-        # feature_list = dataframe.columns.tolist()
-        sample_list = []
-        # for feature in feature_list:
+        # sample_list = []
         samples = dataframe.groupby(feature).head(n)
-        sample_list.append(samples)
-        return sample_list
+        # sample_list.append(samples)
+        # return sample_list
+        return samples
