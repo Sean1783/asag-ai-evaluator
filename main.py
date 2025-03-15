@@ -1,8 +1,23 @@
 from src.database.database_manager import DatabaseManager
+from src.dataset.dataset_factory import DatasetFactory
+from src.sampling.SamplingStrategy import SamplingStrategy
 from src.test_runner.test_runner import *
 from constants import *
 
 doc_source_file = "results/gpt-4o-mini_results_2025-02-23 10:12:13.json"
+
+def dataset_tests():
+    meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
+    meyerger.prep_dataset()
+    ds = meyerger.get_dataset()
+    print(len(ds))
+
+def sampling_tests():
+    meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
+    meyerger.prep_dataset()
+    ds = meyerger.get_dataset()
+    samples = SamplingStrategy
+
 
 def run_tests() -> None:
     samples = select_data(1200, 1215)
@@ -46,7 +61,7 @@ def construct_prompt():
         print(prompt.generate_full_prompt())
 
 def main():
-    pass
+    dataset_tests()
     # get_documents_from_database()
     # insert_document()
     # insert_documents_into_database()
