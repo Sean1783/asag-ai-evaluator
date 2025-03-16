@@ -1,11 +1,12 @@
 from src.database.database_manager import DatabaseManager
 from src.dataset.dataset_factory import DatasetFactory
+from src.pipeline.pipeline import Pipeline
 from src.prompting.prompter import Prompter
 from src.sampling.random_samples import RandomSamples
 from src.sampling.samples_by_feature import SamplesByFeature
 from src.sampling.sampling_context import SamplingContext
 from src.test_runner.test_runner import *
-from constants import AIModels
+from constants import AIModels, SampleStrategyNames
 
 doc_source_file = "results/gpt-4o-mini_results_2025-02-23 10:12:13.json"
 
@@ -85,9 +86,42 @@ def construct_prompter():
     for row in samples.itertuples(False):
         print(prompt.generate_full_prompt(row, qa_feature_names))
 
+def pipeline_tester():
+    pipeline = Pipeline()
+    dataset = DatasetFactory.get_dataset("Meyerger/ASAG2024")
+    dataframe = dataset.get_dataframe()
+    # pipeline.set_dataset("Meyerger/ASAG2024")
+    sampling_strategy = SamplingContext(RandomSamples())
+    # pipeline.set_sampling_strategy(SampleStrategyNames.RANDOM)
+    prompt = (Prompter.PrompterBuilder()
+              .with_system_role("You are a")
+              .with_system_role_adjective("capable")
+              .with_system_role_noun("genius")
+              .build())
+    # pipeline.set_prompt()
+    samples = sampling_strategy.get_samples(dataframe, "", 2)
+    # pipeline.select_samples("", 2)
+    ai_model = ModelContext(AIModels.GEMINI_2_FLASH.value)
+    # pipeline.set_model(AIModels.GEMINI_2_FLASH)
+    # pipeline.query_ai()
+
+def pipeliner():
+    pipeline = Pipeline()
+    dataset = DatasetFactory.get_dataset("Meyerger/ASAG2024")
+    dataframe = dataset.get_dataframe()
+    sampling_strategy = SamplingContext(RandomSamples())
+    prompt = (Prompter.PrompterBuilder()
+              .with_system_role("You are a")
+              .with_system_role_adjective("capable")
+              .with_system_role_noun("genius")
+              .build())
+    samples = sampling_strategy.get_samples(dataframe, "", 2)
+    ai_model = ModelContext(AIModels.GEMINI_2_FLASH.value)
+
 
 def main():
-    construct_prompter()
+    pipeline_tester()
+    # construct_prompter()
     # pipeline_tests()
     # sampling_tests()
     # dataset_tests()
