@@ -6,3 +6,13 @@ class AIModels(Enum):
     CLAUDE_3_HAIKU = "claude-3-haiku-20240307"
     CLAUDE_3_5_HAIKU = "claude-3-5-haiku-20241022"
     GEMINI_2_FLASH = "gemini-2.0-flash"
+
+class FeatureNameValues(Enum):
+    QUESTION = "question"
+    ANSWER = "answer"
+    REFERENCE_ANSWER = "reference_answer"
+    AI_SCORE = "score"
+
+class SampleStrategyNames(Enum):
+    RANDOM = "random"
+    BY_FEATURE = "by_feature"

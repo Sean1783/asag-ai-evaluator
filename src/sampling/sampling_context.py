@@ -1,10 +1,10 @@
 from src.sampling.sampling_strategy import SamplingStrategy
 
 class SamplingContext:
-    def __init__(self, sampling_strategy: SamplingStrategy):
+    def __init__(self, sampling_strategy: SamplingStrategy = None):
         self.sampling_strategy = sampling_strategy
 
-    def set_sampling_strategy(self, sampling_strategy):
+    def set_sampling_strategy(self, sampling_strategy : SamplingStrategy):
         self.sampling_strategy = sampling_strategy
 
     def get_samples(self, dataset, feature: str, n: int):

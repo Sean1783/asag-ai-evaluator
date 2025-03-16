@@ -1,6 +1,6 @@
 {prompt_context}
 Question: {question}
-Student's Answer: {student_answer}
+Student's Answer: {answer}
 Reference Answer: {reference_answer}
 {grading_rubric}
 Return the score as a **plain JSON object** with **no additional text or Markdown formatting** in the following format:

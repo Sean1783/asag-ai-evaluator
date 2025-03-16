@@ -2,7 +2,7 @@ class Prompt:
 
     _template = None
     @classmethod
-    def load_template(cls, file_path="prompt_template.txt"):
+    def load_template(cls, file_path="prompt_template1.txt"):
         if cls._template is None:
             with open(file_path, "r") as file:
                 cls._template = file.read()

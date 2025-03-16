@@ -1,13 +1,11 @@
 from src.database.database_manager import DatabaseManager
 from src.dataset.dataset_factory import DatasetFactory
-from src.prompting.prompt_meyerger_adapter import MeyergerAdapter
 from src.prompting.prompter import Prompter
 from src.sampling.random_samples import RandomSamples
 from src.sampling.samples_by_feature import SamplesByFeature
 from src.sampling.sampling_context import SamplingContext
-from src.sampling.sampling_strategy import SamplingStrategy
 from src.test_runner.test_runner import *
-from constants import *
+from constants import AIModels
 
 doc_source_file = "results/gpt-4o-mini_results_2025-02-23 10:12:13.json"
 
@@ -28,7 +26,7 @@ def sampling_tests():
     samples = strategy.get_samples(ds, "data_source", 5)
     print(samples)
 
-def pipline_tests():
+def pipeline_tests():
     meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
     meyerger.prep_dataset()
     ds = meyerger.get_dataset()
@@ -71,46 +69,26 @@ def get_documents_from_database() -> None:
     for result in results:
         print(result)
 
-# def construct_prompt():
-#     meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
-#     meyerger.prep_dataset()
-#     ds = meyerger.get_dataset()
-#     strategy = SamplingContext(RandomSamples())
-#     samples = strategy.get_samples(ds, "", 1)
-#     for row in samples.itertuples(False):
-#         prompt = (Prompt.PromptBuilder()
-#                   .with_system_role("You are a")
-#                   .with_system_role_adjective("capable")
-#                   .with_system_role_noun("genius")
-#                   .with_prompt_context("Evaluate the student's answer to the following question.")
-#                   .with_grading_rubric("A score of 1.00 is a perfect score and a score of 0.00 is a horrible score.")
-#                   .build(row))
-#         print(prompt.generate_full_prompt())
-
 def construct_prompter():
     meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
     meyerger.prep_dataset()
     ds = meyerger.get_dataset()
     strategy = SamplingContext(RandomSamples())
     samples = strategy.get_samples(ds, "", 2)
-    meyerger_adapter = MeyergerAdapter()
+    qa_feature_names = meyerger.get_q_and_a_feature_names()
     prompt = (Prompter.PrompterBuilder()
               .with_system_role("You are a")
               .with_system_role_adjective("capable")
               .with_system_role_noun("genius")
-              .with_prompt_adapter(meyerger_adapter)
-              .with_prompt_context("Evaluate the student's answer to the following question.")
-              .with_grading_rubric(
-        "A score of 1.00 is a perfect score and a score of 0.00 is a horrible score.")
               .build())
 
     for row in samples.itertuples(False):
-        print(prompt.generate_full_prompt(row))
+        print(prompt.generate_full_prompt(row, qa_feature_names))
 
 
 def main():
     construct_prompter()
-    # pipline_tests()
+    # pipeline_tests()
     # sampling_tests()
     # dataset_tests()
     # get_documents_from_database()

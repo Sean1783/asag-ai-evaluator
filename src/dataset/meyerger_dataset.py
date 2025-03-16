@@ -25,3 +25,9 @@ class MeyergerDataset(DatasetInterface):
     def get_dataset(self):
         return self.dataset
 
+    def get_q_and_a_feature_names(self):
+        return {
+            "question": "question",
+            "answer": "provided_answer",
+            "reference_answer": "reference_answer"
+        }
