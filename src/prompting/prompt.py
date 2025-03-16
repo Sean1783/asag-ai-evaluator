@@ -16,7 +16,6 @@ class Prompt:
             system_role_noun,
             prompt_context,
             grading_rubric,
-            # output_format_instruction
     ):
         self.load_template()
         self.full_system_role = full_system_role
@@ -25,12 +24,6 @@ class Prompt:
         self.system_role_noun = system_role_noun
         self.prompt_context = prompt_context
         self.grading_rubric = grading_rubric
-        # self.output_format_instruction = (
-        #     f"""Return the score as a **plain JSON object** with **no additional text or markdown formatting** in the following format:
-        #     ```json
-        #     {{"score": <your score here>, "reason": "<your brief explanation here>"}}
-        #     {output_format_instruction}
-        # """)
         self.question, self.student_answer, self.reference_answer = self.extract_question_and_answers(dataset_row)
 
     def get_full_system_role_prompt(self):
@@ -61,27 +54,6 @@ class Prompt:
             reference_answer=reference_answer_text,
             grading_rubric=self.grading_rubric,
         )
-#         reference_answer = None
-#         if self.reference_answer is not None:
-#             reference_answer = (
-#                 f"""The following reference answer represents a perfect answer to the question.
-#
-# Reference Answer: {self.reference_answer}""")
-#
-#         full_prompt = f"""
-# {self.prompt_context}
-#
-# Question: {self.question}
-#
-# Student's Answer: {self.student_answer}
-#
-# {reference_answer}
-#
-# {self.grading_rubric}
-#
-# {self.output_format_instruction}
-# """
-#         return full_prompt
 
     class PromptBuilder:
         def __init__(self):
@@ -91,7 +63,6 @@ class Prompt:
             self.system_role_adjective = ""
             self.prompt_context = ""
             self.grading_rubric = ""
-            # self.output_format_instruction = ""
 
         def with_prompt_context(self, prompt_context):
             self.prompt_context = prompt_context
@@ -113,10 +84,6 @@ class Prompt:
             self.grading_rubric = grading_rubric
             return self
 
-        # def with_output_format_instruction(self, output_format_instruction):
-        #     self.output_format_instruction = output_format_instruction
-        #     return self
-
         def set_full_system_role(self):
             if self.system_role != "" and self.system_role_noun != "":
                 if self.system_role_adjective != "":
@@ -127,6 +94,4 @@ class Prompt:
         def build(self, dataset_row):
             self.set_full_system_role()
             return Prompt(dataset_row, self.full_system_role, self.system_role, self.system_role_adjective,
-                          self.system_role_noun, self.prompt_context, self.grading_rubric,
-                          #self.output_format_instruction
-                          )
+                          self.system_role_noun, self.prompt_context, self.grading_rubric)

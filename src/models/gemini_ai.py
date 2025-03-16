@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai.types import GenerateContentConfig
 
-from src.models.aiservice import AIService
+from src.models.ai_service import AIService
 
 class GeminiAI(AIService):
     def query(self, ai_model : str, system_role_prompt : str | None, prompt : str) -> str | None:

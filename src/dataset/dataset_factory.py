@@ -1,4 +1,3 @@
-from src.dataset.dataset_interface import DatasetInterface
 from src.dataset.meyerger_dataset import MeyergerDataset
 
 

@@ -1,4 +1,4 @@
-from src.sampling.SamplingStrategy import SamplingStrategy
+from src.sampling.sampling_strategy import SamplingStrategy
 
 
 class RandomSamples(SamplingStrategy):

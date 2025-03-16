@@ -3,7 +3,7 @@ import os
 import anthropic
 from dotenv import load_dotenv
 
-from src.models.aiservice import AIService
+from src.models.ai_service import AIService
 
 class AnthropicAI(AIService):
     def query(self, ai_model : str, system_role_prompt : str | None,  prompt : str) -> str|None :

@@ -1,5 +1,3 @@
-from typing import List
-
 from datasets import load_dataset
 
 from src.dataset.dataset_interface import DatasetInterface

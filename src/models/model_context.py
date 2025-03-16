@@ -1,6 +1,6 @@
-from src.models.anthropicAI import AnthropicAI
-from src.models.geminiAI import GeminiAI
-from src.models.openAI import OpenAI
+from src.models.anthropic_ai import AnthropicAI
+from src.models.gemini_ai import GeminiAI
+from src.models.open_ai import OpenAI
 
 class ModelContext:
     MODEL_MAP = {

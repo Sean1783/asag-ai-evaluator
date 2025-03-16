@@ -1,9 +1,11 @@
 from src.database.database_manager import DatabaseManager
 from src.dataset.dataset_factory import DatasetFactory
-from src.sampling.RandomSamples import RandomSamples
-from src.sampling.SamplesByFeature import SamplesByFeature
-from src.sampling.SamplingContext import SamplingContext
-from src.sampling.SamplingStrategy import SamplingStrategy
+from src.prompting.prompt_meyerger_adapter import MeyergerAdapter
+from src.prompting.prompter import Prompter
+from src.sampling.random_samples import RandomSamples
+from src.sampling.samples_by_feature import SamplesByFeature
+from src.sampling.sampling_context import SamplingContext
+from src.sampling.sampling_strategy import SamplingStrategy
 from src.test_runner.test_runner import *
 from constants import *
 
@@ -69,24 +71,45 @@ def get_documents_from_database() -> None:
     for result in results:
         print(result)
 
-def construct_prompt():
+# def construct_prompt():
+#     meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
+#     meyerger.prep_dataset()
+#     ds = meyerger.get_dataset()
+#     strategy = SamplingContext(RandomSamples())
+#     samples = strategy.get_samples(ds, "", 1)
+#     for row in samples.itertuples(False):
+#         prompt = (Prompt.PromptBuilder()
+#                   .with_system_role("You are a")
+#                   .with_system_role_adjective("capable")
+#                   .with_system_role_noun("genius")
+#                   .with_prompt_context("Evaluate the student's answer to the following question.")
+#                   .with_grading_rubric("A score of 1.00 is a perfect score and a score of 0.00 is a horrible score.")
+#                   .build(row))
+#         print(prompt.generate_full_prompt())
+
+def construct_prompter():
     meyerger = DatasetFactory.get_dataset("Meyerger/ASAG2024")
     meyerger.prep_dataset()
     ds = meyerger.get_dataset()
     strategy = SamplingContext(RandomSamples())
-    samples = strategy.get_samples(ds, "", 1)
+    samples = strategy.get_samples(ds, "", 2)
+    meyerger_adapter = MeyergerAdapter()
+    prompt = (Prompter.PrompterBuilder()
+              .with_system_role("You are a")
+              .with_system_role_adjective("capable")
+              .with_system_role_noun("genius")
+              .with_prompt_adapter(meyerger_adapter)
+              .with_prompt_context("Evaluate the student's answer to the following question.")
+              .with_grading_rubric(
+        "A score of 1.00 is a perfect score and a score of 0.00 is a horrible score.")
+              .build())
+
     for row in samples.itertuples(False):
-        prompt = (Prompt.PromptBuilder()
-                  .with_system_role("You are a")
-                  .with_system_role_adjective("capable")
-                  .with_system_role_noun("genius")
-                  .with_prompt_context("Evaluate the student's answer to the following question.")
-                  .with_grading_rubric("A score of 1.00 is a perfect score and a score of 0.00 is a horrible score.")
-                  .build(row))
-        print(prompt.generate_full_prompt())
+        print(prompt.generate_full_prompt(row))
 
 
 def main():
+    construct_prompter()
     # pipline_tests()
     # sampling_tests()
     # dataset_tests()
@@ -94,7 +117,8 @@ def main():
     # insert_document()
     # insert_documents_into_database()
     # run_tests()
-    construct_prompt()
+    # construct_prompt()
+
 
 if __name__ == '__main__':
     main()

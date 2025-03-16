@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 import openai
 
-from src.models.aiservice import AIService
+from src.models.ai_service import AIService
 
 class OpenAI(AIService):
     def query(self, ai_model : str, system_role_prompt : str, prompt : str) -> str | None:

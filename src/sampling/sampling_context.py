@@ -1,4 +1,4 @@
-from src.sampling.SamplingStrategy import SamplingStrategy
+from src.sampling.sampling_strategy import SamplingStrategy
 
 class SamplingContext:
     def __init__(self, sampling_strategy: SamplingStrategy):
