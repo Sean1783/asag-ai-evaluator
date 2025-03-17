@@ -6,7 +6,7 @@ from src.sampling.random_samples import RandomSamples
 from src.sampling.samples_by_feature import SamplesByFeature
 from src.sampling.sampling_context import SamplingContext
 from src.test_runner.test_runner import *
-from constants import AIModels, SampleStrategyNames
+from constants import AIModels, SampleStrategyNames, DbDetails
 
 doc_source_file = "results/gpt-4o-mini_results_2025-02-23 10:12:13.json"
 
@@ -106,14 +106,16 @@ def pipeline_tester():
 
 def pipeliner():
     dataset = DatasetFactory.get_dataset("Meyerger/ASAG2024")
-    sampling_strategy = SamplingContext(RandomSamples())
+    # sampling_strategy = SamplingContext(RandomSamples())
+    sampling_strategy = SamplingContext(SamplesByFeature("data_source"))
     prompt = (Prompter.PrompterBuilder()
-              .with_system_role("You are a")
-              .with_system_role_adjective("capable")
-              .with_system_role_noun("genius")
+              .with_grading_rubric("Provide a score from 0.0 to 1.0")
+              .with_system_role("You are talented professor")
               .build())
-    ai_model = ModelContext(AIModels.GEMINI_2_FLASH.value)
-    pipeline = Pipeline(dataset, sampling_strategy, ai_model, prompt)
+    # ai_model = ModelContext(AIModels.GEMINI_2_FLASH.value)
+    ai_model = ModelContext(AIModels.GEMINI_2_FLASH)
+    db_manager = DatabaseManager(DbDetails.DATABASE_NAME.value)
+    pipeline = Pipeline(dataset, sampling_strategy, ai_model, prompt, db_manager)
     pipeline.run()
 
 def main():

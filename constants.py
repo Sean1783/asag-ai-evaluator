@@ -16,3 +16,7 @@ class FeatureNameValues(Enum):
 class SampleStrategyNames(Enum):
     RANDOM = "random"
     BY_FEATURE = "by_feature"
+
+class DbDetails(Enum):
+    DATABASE_NAME = "results_db_1"
+    DATABASE_COLLECTION = "test_collection_1"

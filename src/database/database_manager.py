@@ -27,9 +27,9 @@ class DatabaseManager:
         except Exception as e:
             print(f"Database did not insert document successfully : {e}")
 
-    def insert_documents(self, collection : str, documents : List) -> List | None:
+    def insert_documents(self, collection_name : str, documents : List) -> List | None:
         try:
-            collection = self.db[collection]
+            collection = self.db[collection_name]
             result = collection.insert_many(documents)
             return result.inserted_ids
         except Exception as e:

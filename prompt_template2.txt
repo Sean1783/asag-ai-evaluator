@@ -4,7 +4,6 @@ Here is an answer: {answer}
 Here is the reference answer: {reference_answer}
 {grading_rubric}
 Evaluate the answer compared to the reference answer.
-Provide a score from 0.0 to 1.0.
 Return the score as a **plain JSON object** with **no additional text or Markdown formatting** in the following format:
 ```json
  {{"score": <your score here>, "reason": "<your brief explanation here>"}}
