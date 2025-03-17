@@ -106,14 +106,15 @@ def pipeline_tester():
 
 def pipeliner():
     dataset = DatasetFactory.get_dataset("Meyerger/ASAG2024")
-    # sampling_strategy = SamplingContext(RandomSamples())
-    sampling_strategy = SamplingContext(SamplesByFeature("data_source"))
+    sampling_strategy = SamplingContext(RandomSamples(16))
+    # sampling_strategy = SamplingContext(SamplesByFeature("data_source"))
     prompt = (Prompter.PrompterBuilder()
               .with_grading_rubric("Provide a score from 0.0 to 1.0")
               .with_system_role("You are talented professor")
+              .with_prompt_context("These questions are very difficult")
               .build())
     # ai_model = ModelContext(AIModels.GEMINI_2_FLASH.value)
-    ai_model = ModelContext(AIModels.GEMINI_2_FLASH)
+    ai_model = ModelContext(AIModels.GEMINI_2_FLASH.value)
     db_manager = DatabaseManager(DbDetails.DATABASE_NAME.value)
     pipeline = Pipeline(dataset, sampling_strategy, ai_model, prompt, db_manager)
     pipeline.run()

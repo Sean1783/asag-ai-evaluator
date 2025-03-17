@@ -17,22 +17,21 @@ class ModelContext:
         self.ai_model = None
         self.set_ai_model(ai_model)
 
-    def set_ai_model(self, ai_model : AIModels) -> None:
-        service = self.MODEL_MAP.get(ai_model.value)
-        if service is None:
-            raise ValueError(f"Unknown AI model: {ai_model.value}")
-        else:
-            self.ai_service = service()
-            self.ai_model = ai_model.value
-
-
-    # def set_ai_model(self, ai_model : str) -> None:
-    #     service = self.MODEL_MAP.get(ai_model)
+    # def set_ai_model(self, ai_model : AIModels) -> None:
+    #     service = self.MODEL_MAP.get(ai_model.value)
     #     if service is None:
-    #         raise ValueError(f"Unknown AI model: {ai_model}")
+    #         raise ValueError(f"Unknown AI model: {ai_model.value}")
     #     else:
     #         self.ai_service = service()
-    #         self.ai_model = ai_model
+    #         self.ai_model = ai_model.value
+
+    def set_ai_model(self, ai_model : str) -> None:
+        service = self.MODEL_MAP.get(ai_model)
+        if service is None:
+            raise ValueError(f"Unknown AI model: {ai_model}")
+        else:
+            self.ai_service = service()
+            self.ai_model = ai_model
 
     def query(self, system_role_prompt : str,  prompt : str) -> str|None:
         return self.ai_service.query(self.ai_model, system_role_prompt, prompt)
