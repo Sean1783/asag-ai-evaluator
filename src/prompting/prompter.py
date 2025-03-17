@@ -24,6 +24,7 @@ class Prompter:
         self.system_role_noun = system_role_noun
         self.prompt_context = prompt_context
         self.grading_rubric = grading_rubric
+        self.full_prompt = None
 
     def get_full_system_role_prompt(self):
         return self.full_system_role
@@ -49,13 +50,24 @@ class Prompter:
 
     def generate_full_prompt(self, dataset_row, qa_feature_names):
         question, answer, reference_answer = self.extract_question_and_answers(dataset_row, qa_feature_names)
-        return self._template.format(
+        # return self._template.format(
+        #     prompt_context=self.prompt_context,
+        #     question=question,
+        #     answer=answer,
+        #     reference_answer=reference_answer,
+        #     grading_rubric=self.grading_rubric,
+        # )
+        self.full_prompt = self._template.format(
             prompt_context=self.prompt_context,
             question=question,
             answer=answer,
             reference_answer=reference_answer,
             grading_rubric=self.grading_rubric,
         )
+        return self.full_prompt
+
+    def get_full_prompt(self):
+        return self.full_prompt
 
     class PrompterBuilder:
         def __init__(self):
@@ -65,7 +77,6 @@ class Prompter:
             self.system_role_adjective = ""
             self.prompt_context = ""
             self.grading_rubric = ""
-
 
         def set_full_system_role(self):
             if self.system_role != "" and self.system_role_noun != "":

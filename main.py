@@ -40,7 +40,6 @@ def pipeline_tests():
     test_results = run_test(samples, ai_service)
     save_results(f"results/{ai_model}_results", test_results)
 
-
 def run_tests() -> None:
     samples = select_data(1200, 1215)
     ai_model = AIModels.GEMINI_2_FLASH.value
@@ -106,21 +105,20 @@ def pipeline_tester():
     # pipeline.query_ai()
 
 def pipeliner():
-    pipeline = Pipeline()
     dataset = DatasetFactory.get_dataset("Meyerger/ASAG2024")
-    dataframe = dataset.get_dataframe()
     sampling_strategy = SamplingContext(RandomSamples())
     prompt = (Prompter.PrompterBuilder()
               .with_system_role("You are a")
               .with_system_role_adjective("capable")
               .with_system_role_noun("genius")
               .build())
-    samples = sampling_strategy.get_samples(dataframe, "", 2)
     ai_model = ModelContext(AIModels.GEMINI_2_FLASH.value)
-
+    pipeline = Pipeline(dataset, sampling_strategy, ai_model, prompt)
+    pipeline.run()
 
 def main():
-    pipeline_tester()
+    pipeliner()
+    # pipeline_tester()
     # construct_prompter()
     # pipeline_tests()
     # sampling_tests()

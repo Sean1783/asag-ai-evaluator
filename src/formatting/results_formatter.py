@@ -5,6 +5,19 @@ from src.prompting.prompt import Prompt
 from src.prompting.prompter import Prompter
 
 
+def format_result5(dataset_row : Tuple[Any, ...], prompter : Prompter, ai_response : str) -> Dict[Any, Any]:
+    formatted_result = dict(dataset_row._asdict())
+    formatted_result.update({
+        "system_role_info": prompter.get_full_system_role_prompt(),
+        "full_prompt" : prompter.get_full_prompt()
+    })
+    try:
+        formatted_result["ai_response"] = json.loads(ai_response)
+    except json.decoder.JSONDecodeError as e:
+        raise ValueError(f"Invalid JSON response: {e}")
+    return formatted_result
+
+
 def format_result4(dataset_row : Tuple[Any, ...], prompter : Prompter, ai_response : str) -> Dict[Any, Any]:
     formatted_result = dict(dataset_row._asdict())
     system_role_info = {
@@ -22,8 +35,6 @@ def format_result4(dataset_row : Tuple[Any, ...], prompter : Prompter, ai_respon
     except json.decoder.JSONDecodeError as e:
         raise ValueError(f"Invalid JSON response: {e}")
     return formatted_result
-
-
 
 
 def format_result3(dataset_row : Tuple[Any, ...], prompt : Prompt, ai_response : str) -> Dict[Any, Any]:

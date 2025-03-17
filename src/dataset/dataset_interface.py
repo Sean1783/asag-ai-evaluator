@@ -13,3 +13,7 @@ class DatasetInterface(ABC):
     @abstractmethod
     def get_q_and_a_feature_names(self):
         pass
+
+    @abstractmethod
+    def get_dataframe(self):
+        pass
