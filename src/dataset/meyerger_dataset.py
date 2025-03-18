@@ -20,9 +20,6 @@ class MeyergerDataset(DatasetInterface):
             print(f"Unexpected error loading dataset '{dataset_name}': {e}")
 
     def prep_dataset(self):
-        # self.dataset = self.dataset["train"].to_pandas()
-        # feature_name_list = self.dataset.columns.tolist()
-        # self.dataset = self.dataset.dropna(subset=feature_name_list)
         self.dataframe = self.dataset["train"].to_pandas()
         feature_name_list = self.dataframe.columns.tolist()
         self.dataframe = self.dataframe.dropna(subset=feature_name_list)

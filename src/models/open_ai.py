@@ -5,8 +5,9 @@ import openai
 
 from src.models.ai_service import AIService
 
+
 class OpenAI(AIService):
-    def query(self, ai_model : str, system_role_prompt : str, prompt : str) -> str | None:
+    def query(self, ai_model: str, system_role_prompt: str, prompt: str) -> str | dict:
 
         try:
             load_dotenv()
@@ -26,3 +27,4 @@ class OpenAI(AIService):
             return response.choices[0].message.content
         except Exception as e:
             print(f" Error querying OpenAI: {e}")
+            return {"error": f"Query failed: {str(e)}"}

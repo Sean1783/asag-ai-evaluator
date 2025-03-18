@@ -1,4 +1,5 @@
-from typing import List
+from typing import List, Tuple
+import json
 
 from constants import DbDetails
 from src.database.database_manager import DatabaseManager
@@ -40,15 +41,23 @@ class Pipeline:
         print("Generating full system role...")
         return self.prompt.get_full_system_role_prompt()
 
-    def query_ai(self, samples: pd.DataFrame, qa_feature_names: str, system_role: str) -> List[dict]:
+    def query_ai(self, samples: pd.DataFrame, qa_feature_names: str, system_role: str) -> Tuple[List[dict], List[dict]]:
         results = []
+        failed_queries = []
+        i = 0
         print("Querying AI...")
         for row in samples.itertuples():
             full_prompt = self.prompt.generate_full_prompt(row, qa_feature_names)
             response = self.model.query(system_role, full_prompt)
-            result = format_result5(row, self.prompt, response)
-            results.append(result)
-        return results
+            if "error" in response:
+                print(f"⚠️ Warning: Query {i} failed - {response['error']}")
+                full_prompt["error"] = response["error"]
+                failed_queries.append(full_prompt)
+            else:
+                result = format_result5(row, self.prompt, response)
+                results.append(result)
+            i += 1
+        return results, failed_queries
 
     def insert_results_into_database(self, results: List[dict]) -> None:
         print("Inserting results...")
@@ -56,9 +65,14 @@ class Pipeline:
 
     def run(self):
         dataframe = self.generate_dataframe()
-        samples = self.sampling_strategy.get_samples(dataframe, "", 2)
+        samples = self.sampling_strategy.get_samples(dataframe)
         qa_feature_names = self.generate_qa_feature_names()
         system_role = self.generate_system_role()
-        results = self.query_ai(samples, qa_feature_names, system_role)
+        results, failed_queries = self.query_ai(samples, qa_feature_names, system_role)
         self.insert_results_into_database(results)
+        if len(failed_queries) > 0:
+            with open("failures.json", "w") as file:
+                print("Saving failed queries...")
+                json.dump(failed_queries, file, indent=2)
+
         print("---Pipeline execution complete---")

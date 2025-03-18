@@ -23,9 +23,6 @@ class Prompter:
     def get_full_system_role_prompt(self):
         return self.system_role
 
-    # def get_system_role(self):
-    #     return self.system_role
-
     def get_prompt_context(self):
         return self.prompt_context
 
