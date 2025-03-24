@@ -25,4 +25,4 @@ class GeminiAI(AIService):
             return response.text
         except Exception as e:
             print(f"Error querying Gemini: {e}")
-            return {"error": f"Query failed: {str(e)}"}
+            return {"model_query_error": f"Query failed: {str(e)}"}

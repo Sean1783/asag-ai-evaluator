@@ -49,12 +49,12 @@ class Pipeline:
         for row in samples.itertuples():
             full_prompt = self.prompt.generate_full_prompt(row, qa_feature_names)
             response = self.model.query(system_role, full_prompt)
-            if "error" in response:
-                print(f"⚠️ Warning: Query {i} failed - {response['error']}")
-                full_prompt["error"] = response["error"]
+            if "model_query_error" in response:
+                print(f"⚠️ Warning: Query {i} failed - {response['model_query_error']}")
+                full_prompt["error"] = response["model_query_error"]
                 failed_queries.append(full_prompt)
             else:
-                result = format_result5(row, self.prompt, response)
+                result = format_result5(row, self.prompt, response, self.model.get_ai_model())
                 results.append(result)
             i += 1
         return results, failed_queries

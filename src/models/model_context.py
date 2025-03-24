@@ -27,3 +27,6 @@ class ModelContext:
 
     def query(self, system_role_prompt: str, prompt: str) -> str | dict:
         return self.ai_service.query(self.ai_model, system_role_prompt, prompt)
+
+    def get_ai_model(self):
+        return self.ai_model

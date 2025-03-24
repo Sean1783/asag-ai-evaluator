@@ -19,4 +19,5 @@ class SampleStrategyNames(Enum):
 
 class DbDetails(Enum):
     DATABASE_NAME = "myergerDB"
-    DATABASE_COLLECTION = "results"
+    # DATABASE_COLLECTION = "results1"
+    DATABASE_COLLECTION = "ds1"

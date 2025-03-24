@@ -30,4 +30,4 @@ class AnthropicAI(AIService):
             return response.content[0].text
         except Exception as e:
             print(f" Error querying Anthropic: {e}")
-            return {"error": f"Query failed: {str(e)}"}
+            return {"model_query_error": f"Query failed: {str(e)}"}

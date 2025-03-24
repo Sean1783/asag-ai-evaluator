@@ -27,4 +27,4 @@ class OpenAI(AIService):
             return response.choices[0].message.content
         except Exception as e:
             print(f" Error querying OpenAI: {e}")
-            return {"error": f"Query failed: {str(e)}"}
+            return {"model_query_error": f"Query failed: {str(e)}"}
