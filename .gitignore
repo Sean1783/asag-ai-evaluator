@@ -4,3 +4,4 @@ config.py
 .env
 __pycache__/
 .env
+.DS_Store
