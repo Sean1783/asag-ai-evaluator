@@ -22,7 +22,7 @@ class OpenAI(AIService):
                     {"role": "system", "content": system_role_prompt},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=100
+                max_tokens=200
             )
             return response.choices[0].message.content
         except Exception as e:

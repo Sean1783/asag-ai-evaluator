@@ -47,21 +47,38 @@ class Pipeline:
         i = 0
         print("Querying AI...")
         for row in samples.itertuples():
-            full_prompt = self.prompt.generate_full_prompt(row, qa_feature_names)
-            response = self.model.query(system_role, full_prompt)
-            if "model_query_error" in response:
-                print(f"⚠️ Warning: Query {i} failed - {response['model_query_error']}")
-                full_prompt["error"] = response["model_query_error"]
-                failed_queries.append(full_prompt)
-            else:
-                result = format_result5(row, self.prompt, response, self.model.get_ai_model())
-                results.append(result)
+            try:
+                full_prompt = self.prompt.generate_full_prompt(row, qa_feature_names)
+                response = self.model.query(system_role, full_prompt)
+                # if "model_query_error" in response:
+                if isinstance(response, dict) and "model_query_error" in response:
+                    print(f"⚠️ Warning: Query {i} failed - {response['model_query_error']}")
+                    full_prompt_dict = full_prompt if isinstance(full_prompt, dict) else {"prompt": full_prompt}
+                    full_prompt_dict["error"] = response["model_query_error"]
+                    failed_queries.append(full_prompt_dict)
+                    # full_prompt["error"] = response["model_query_error"]
+                    # failed_queries.append(full_prompt)
+                else:
+                    result = format_result5(row, self.prompt, response, self.model.get_ai_model())
+                    results.append(result)
+            except Exception as e:
+                print(f"⚠️ Error in query_ai processing: {str(e)}")
+                try:
+                    error_info = {
+                        "row_index": i,
+                        "error": str(e),
+                        "prompt": full_prompt if 'full_prompt' in locals() else "Failed before prompt generation"
+                    }
+                    failed_queries.append(error_info)
+                except Exception:
+                    failed_queries.append({"row_index": i, "error": "Failed to capture error details"})
             i += 1
         return results, failed_queries
 
     def insert_results_into_database(self, results: List[dict]) -> None:
         print("Inserting results...")
-        self.database.insert_documents(DbDetails.DATABASE_COLLECTION.value, results)
+        # self.database.insert_documents(DbDetails.DATABASE_COLLECTION.value, results)
+        self.database.insert_documents(results)
 
     def run(self):
         dataframe = self.generate_dataframe()

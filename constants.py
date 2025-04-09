@@ -18,6 +18,9 @@ class SampleStrategyNames(Enum):
     BY_FEATURE = "by_feature"
 
 class DbDetails(Enum):
-    DATABASE_NAME = "myergerDB"
-    # DATABASE_COLLECTION = "results1"
-    DATABASE_COLLECTION = "ds1"
+    MYERGER_DB_NAME = "myergerDB"
+    DB_COLLECTION_BEETLE = "Beetle"
+    DB_COLLECTION_SAF = "SAF"
+    DB_COLLECTION_MOHLER = "Mohler"
+    DB_COLLECTION_SCIENTSBANK = "SciEntsBank"
+

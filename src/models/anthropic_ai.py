@@ -18,7 +18,7 @@ class AnthropicAI(AIService):
             client = anthropic.Anthropic(api_key=anthropic_api_key)
             response = client.messages.create(
                 model=ai_model,
-                max_tokens=100,
+                max_tokens=200,
                 system=system_role_prompt,
                 messages=[
                     {

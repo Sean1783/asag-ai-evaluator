@@ -10,14 +10,18 @@ from constants import AIModels, DbDetails
 
 def execute_pipeline():
     dataset = DatasetFactory.get_dataset("Meyerger/ASAG2024")
-    # sampling_strategy = SamplingContext(RandomSamples(100))
-    sampling_strategy = SamplingContext(SamplesOfFeatureValue("data_source", "SAF", 110))
+    ds_feature = "data_source"
+    collection_feature_name = DbDetails.DB_COLLECTION_BEETLE.value
+    num_samples = 300
+    sampling_strategy = SamplingContext(SamplesOfFeatureValue(ds_feature, collection_feature_name, num_samples))
     prompt = (Prompter.PrompterBuilder()
               .with_grading_rubric("Provide a score from 0.0 to 1.0")
               .with_system_role("You are talented grader")
               .build())
-    ai_model = ModelContext(AIModels.GPT_4O_MINI.value)
-    db_manager = DatabaseManager(DbDetails.DATABASE_NAME.value)
+    ai_model_name = AIModels.GPT_4O_MINI.value
+    ai_model = ModelContext(ai_model_name)
+    db_manager = DatabaseManager(DbDetails.MYERGER_DB_NAME.value)
+    db_manager.set_collection(collection_feature_name)
     pipeline = Pipeline(dataset, sampling_strategy, ai_model, prompt, db_manager)
     pipeline.run()
 

@@ -5,10 +5,16 @@ from pymongo import MongoClient
 from dotenv import load_dotenv
 from pymongo.synchronous.cursor import Cursor, Mapping
 
+from constants import DbDetails
+
 class DatabaseManager:
     def __init__(self, database_name: str) -> None:
         self.db = None
         self.connect_to_database(database_name)
+        self.collection = None
+
+    def set_collection(self, collection_name: str) -> None:
+        self.collection = collection_name
 
     def connect_to_database(self, db_name : str) -> None:
         load_dotenv()
@@ -27,9 +33,13 @@ class DatabaseManager:
         except Exception as e:
             print(f"Database did not insert document successfully : {e}")
 
-    def insert_documents(self, collection_name : str, documents : List) -> List | None:
+    # def insert_documents(self, documents: List, collection_name: str = None) -> List | None:
+    def insert_documents(self, documents : List) -> List | None:
         try:
-            collection = self.db[collection_name]
+            # if collection_name is None:
+            collection = self.db[self.collection]
+            # else:
+            #     collection = self.db[collection_name]
             result = collection.insert_many(documents)
             return result.inserted_ids
         except Exception as e:
