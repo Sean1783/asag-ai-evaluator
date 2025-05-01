@@ -1,9 +1,10 @@
 from abc import ABC, abstractmethod
 
+
 class DatasetInterface(ABC):
 
     @abstractmethod
-    def load_dataset(self, dataset_name : str):
+    def load_dataset(self, dataset_name: str):
         pass
 
     @abstractmethod

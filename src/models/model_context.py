@@ -9,6 +9,7 @@ class ModelContext:
         "chatgpt-4o-latest": OpenAI,
         "claude-3-haiku-20240307": AnthropicAI,
         "claude-3-5-haiku-20241022": AnthropicAI,
+        "claude-3-7-sonnet-20250219": AnthropicAI,
         "gemini-2.0-flash": GeminiAI,
     }
 

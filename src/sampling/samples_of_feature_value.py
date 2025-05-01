@@ -2,8 +2,9 @@ import pandas as pd
 
 from src.sampling.sampling_strategy import SamplingStrategy
 
+
 class SamplesOfFeatureValue(SamplingStrategy):
-    def __init__(self, feature : str, feature_value : str, num_samples : int = 0):
+    def __init__(self, feature: str, feature_value: str, num_samples: int = 0):
         self.feature = feature
         self.feature_value = feature_value
         self.num_samples = num_samples

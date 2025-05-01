@@ -1,10 +1,12 @@
 from typing import Tuple, Any
 
-def system_role_formatter(temperament : str) -> str:
+
+def system_role_formatter(temperament: str) -> str:
     system_role_prompt = f"You are a/an {temperament} grader."
     return system_role_prompt
 
-def prompt_formatter2(dataset_row : Tuple[Any, ...]) -> str:
+
+def prompt_formatter2(dataset_row: Tuple[Any, ...]) -> str:
     row_dict = dataset_row._asdict()
     question = row_dict["question"]
     student_answer = row_dict["provided_answer"]
@@ -35,6 +37,7 @@ def prompt_formatter2(dataset_row : Tuple[Any, ...]) -> str:
     - Do not include any backticks or other markdown delimiters. Just return the JSON object.
     """
     return full_prompt
+
 
 def prompt_formatter(question: str, student_answer: str, reference_answer: str) -> str:
     full_prompt = f"""

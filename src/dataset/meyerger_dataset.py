@@ -2,13 +2,14 @@ from datasets import load_dataset
 
 from src.dataset.dataset_interface import DatasetInterface
 
+
 class MeyergerDataset(DatasetInterface):
     def __init__(self):
         self.dataset_name = None
         self.dataset = None
         self.dataframe = None
 
-    def load_dataset(self, dataset_name : str):
+    def load_dataset(self, dataset_name: str):
         try:
             self.dataset = load_dataset(dataset_name)
             self.prep_dataset()

@@ -1,11 +1,10 @@
 import json
-from typing import Dict, List, Tuple, Any
+from typing import Dict, Tuple, Any
 
-from src.prompting.prompt import Prompt
 from src.prompting.prompter import Prompter
 
 
-def format_result5(dataset_row: Tuple[Any, ...], prompter: Prompter, ai_response: str, ai_model : str) -> Dict[Any, Any]:
+def format_result5(dataset_row: Tuple[Any, ...], prompter: Prompter, ai_response: str, ai_model: str) -> Dict[Any, Any]:
     formatted_result = dict(dataset_row._asdict())
     formatted_result.update({
         "system_role_info": prompter.get_full_system_role_prompt(),
