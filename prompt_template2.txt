@@ -1,0 +1,8 @@
+{prompt_context}
+Here is a question: {question}
+Here is an answer: {answer}
+Here is the reference answer: {reference_answer}
+{grading_rubric}
+Evaluate the answer compared to the reference answer.
+Return the score as a **plain JSON object** with **no additional text or Markdown formatting** in the following format:
+ {{"score": <your score here>, "reason": "<your brief explanation here>"}}

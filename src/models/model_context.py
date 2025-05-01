@@ -1,6 +1,7 @@
-from src.models.anthropicAI import AnthropicAI
-from src.models.geminiAI import GeminiAI
-from src.models.openAI import OpenAI
+from src.models.anthropic_ai import AnthropicAI
+from src.models.gemini_ai import GeminiAI
+from src.models.open_ai import OpenAI
+
 
 class ModelContext:
     MODEL_MAP = {
@@ -8,6 +9,7 @@ class ModelContext:
         "chatgpt-4o-latest": OpenAI,
         "claude-3-haiku-20240307": AnthropicAI,
         "claude-3-5-haiku-20241022": AnthropicAI,
+        "claude-3-7-sonnet-20250219": AnthropicAI,
         "gemini-2.0-flash": GeminiAI,
     }
 
@@ -16,7 +18,7 @@ class ModelContext:
         self.ai_model = None
         self.set_ai_model(ai_model)
 
-    def set_ai_model(self, ai_model : str) -> None:
+    def set_ai_model(self, ai_model: str) -> None:
         service = self.MODEL_MAP.get(ai_model)
         if service is None:
             raise ValueError(f"Unknown AI model: {ai_model}")
@@ -24,5 +26,8 @@ class ModelContext:
             self.ai_service = service()
             self.ai_model = ai_model
 
-    def query(self, system_role_prompt : str,  prompt : str) -> str|None:
+    def query(self, system_role_prompt: str, prompt: str) -> str | dict:
         return self.ai_service.query(self.ai_model, system_role_prompt, prompt)
+
+    def get_ai_model(self):
+        return self.ai_model

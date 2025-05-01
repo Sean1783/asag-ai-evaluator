@@ -1,57 +1,39 @@
 from src.database.database_manager import DatabaseManager
-from src.test_runner.test_runner import *
-from constants import *
+from src.dataset.dataset_factory import DatasetFactory
+from src.pipeline.pipeline import Pipeline
+from src.sampling.samples_of_feature_value import SamplesOfFeatureValue
+from src.sampling.sampling_context import SamplingContext
+from src.prompting.prompter import Prompter
+from src.models.model_context import ModelContext
+from constants import AIModels, DbDetails
 
-doc_source_file = "results/gpt-4o-mini_results_2025-02-23 10:12:13.json"
+collections = ["Beetle", "SAF", "Mohler", "SciEntsBank"]
+ai_models = ["gpt-4o-mini", "chatgpt-4o-latest", "claude-3-haiku-20240307", "claude-3-5-haiku-20241022"]
 
-def run_tests() -> None:
-    samples = select_data(1200, 1215)
-    ai_model = AIModels.GEMINI_2_FLASH.value
-    ai_service = ModelContext(ai_model)
-    test_results = run_test(samples, ai_service)
-    save_results(f"results/{ai_model}_results", test_results)
-    print("Run tests complete")
 
-def insert_document_into_database() -> None:
-    db_manager = DatabaseManager("test_database")
-    with open(doc_source_file, "r") as file:
-        data = json.load(file)
-    result_id = db_manager.insert_document("test_collection", data[0])
-    print(f"Result ID: {result_id}")
+def execute_pipeline():
+    dataset = DatasetFactory.get_dataset("Meyerger/ASAG2024")
+    ds_feature = "data_source"
+    collection_feature_name = DbDetails.DB_COLLECTION_SCIENTSBANK.value
+    num_samples = 500
+    sampling_strategy = SamplingContext(SamplesOfFeatureValue(ds_feature, collection_feature_name, num_samples))
+    prompt = (Prompter.PrompterBuilder()
+              .with_grading_rubric("Provide a score from 0.0 to 1.0")
+              .with_system_role("You are talented grader")
+              .build())
 
-def insert_documents_into_database() -> None:
-    db_manager = DatabaseManager("test_database")
-    with open(doc_source_file, "r") as file:
-        data = json.load(file)
-    inserted_ids = db_manager.insert_documents("test_collection", data)
-    for id_num in inserted_ids:
-        print(id_num)
+    ai_model_name = AIModels.CLAUDE_3_7_SONNET.value
+    ai_model = ModelContext(ai_model_name)
+    db_manager = DatabaseManager(DbDetails.MYERGER_DB_NAME.value)
+    collection_name = ai_model_name + "_" + collection_feature_name
+    db_manager.set_collection(collection_name)
+    pipeline = Pipeline(dataset, sampling_strategy, ai_model, prompt, db_manager)
+    pipeline.run()
 
-def get_documents_from_database() -> None:
-    db_manager = DatabaseManager("test_database")
-    results = db_manager.find_documents("test_collection")
-    for result in results:
-        print(result)
-
-def construct_prompt():
-    samples = select_data(0, 1)
-    for row in samples.itertuples(False):
-        prompt = (Prompt.PromptBuilder()
-                  .with_system_role("You are a")
-                  .with_system_role_adjective("capable")
-                  .with_system_role_noun("genius")
-                  .with_prompt_context("Evaluate the student's answer to the following question.")
-                  .with_grading_rubric("A score of 1.00 is a perfect score and a score of 0.00 is a horrible score.")
-                  .build(row))
-        print(prompt.generate_full_prompt())
 
 def main():
-    pass
-    # get_documents_from_database()
-    # insert_document()
-    # insert_documents_into_database()
-    # run_tests()
-    # construct_prompt()
+    execute_pipeline()
+
 
 if __name__ == '__main__':
     main()

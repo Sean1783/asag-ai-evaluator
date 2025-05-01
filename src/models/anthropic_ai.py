@@ -3,10 +3,11 @@ import os
 import anthropic
 from dotenv import load_dotenv
 
-from src.models.aiservice import AIService
+from src.models.ai_service import AIService
+
 
 class AnthropicAI(AIService):
-    def query(self, ai_model : str, system_role_prompt : str | None,  prompt : str) -> str|None :
+    def query(self, ai_model: str, system_role_prompt: str | None, prompt: str) -> str | dict:
 
         try:
             load_dotenv()
@@ -17,7 +18,7 @@ class AnthropicAI(AIService):
             client = anthropic.Anthropic(api_key=anthropic_api_key)
             response = client.messages.create(
                 model=ai_model,
-                max_tokens=100,
+                max_tokens=200,
                 system=system_role_prompt,
                 messages=[
                     {
@@ -29,3 +30,4 @@ class AnthropicAI(AIService):
             return response.content[0].text
         except Exception as e:
             print(f" Error querying Anthropic: {e}")
+            return {"model_query_error": f"Query failed: {str(e)}"}
